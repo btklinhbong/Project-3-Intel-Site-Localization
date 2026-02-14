@@ -339,3 +339,57 @@ section div:hover p {
   padding: 20px;
   margin: 0;
 }
+
+/* ============================================
+   RTL (RIGHT-TO-LEFT) SUPPORT
+   ============================================ */
+
+/* RTL adjustments for cards - swap border from left to right */
+html[dir="rtl"] section div {
+  border-left: none;
+  border-right: 6px solid #0071C5;
+  /* Intel Blue right border for RTL */
+}
+
+/* RTL adjustments for hover state - swap border colors */
+html[dir="rtl"] section div:hover {
+  border-left: none;
+  border-right: 6px solid #FF6B35;
+  /* Orange accent on hover for RTL */
+  border-right-color: #FF6B35;
+}
+
+/* RTL text alignment */
+html[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+/* RTL header alignment */
+html[dir="rtl"] header {
+  text-align: center;
+}
+
+html[dir="rtl"] header p {
+  text-align: right;
+}
+
+/* RTL section scrolling direction */
+html[dir="rtl"] section {
+  flex-wrap: nowrap;
+}
+
+/* RTL paragraph text alignment */
+html[dir="rtl"] section p {
+  text-align: right;
+}
+
+/* RTL title alignment */
+html[dir="rtl"] section h3 {
+  text-align: right;
+}
+
+/* RTL year heading alignment */
+html[dir="rtl"] section h2 {
+  text-align: right;
+}
