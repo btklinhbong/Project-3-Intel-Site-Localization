@@ -195,7 +195,7 @@ section p {
    ============================================ */
 
 /* Hover effect - card elevation and color change */
-section div:hover {
+section:not(.sustainability-section) div:hover {
   transform: translateY(-12px) rotateX(2deg) scale(1.02);
   /* Lift card with subtle 3D rotation and scale */
   box-shadow: 
@@ -210,7 +210,7 @@ section div:hover {
 }
 
 /* Hover effect - Image zoom and brightness enhancement */
-section div:hover img {
+section:not(.sustainability-section) div:hover img {
   transform: scale(1.08) rotateZ(-1deg);
   /* Zoom with subtle tilt */
   filter: brightness(1.15) contrast(1.05);
@@ -220,7 +220,7 @@ section div:hover img {
 }
 
 /* Hover effect for year text */
-section div:hover h2 {
+section:not(.sustainability-section) div:hover h2 {
   color: #FF6B35;
   /* Orange accent for contrast */
   text-shadow: 0 2px 8px rgba(255, 107, 53, 0.2);
@@ -230,7 +230,7 @@ section div:hover h2 {
 }
 
 /* Hover effect for title */
-section div:hover h3 {
+section:not(.sustainability-section) div:hover h3 {
   color: #0071C5;
   /* Intel Blue on hover */
   transform: translateX(4px) scale(1.05);
@@ -240,7 +240,7 @@ section div:hover h3 {
 }
 
 /* Hover effect for description - text enhancement */
-section div:hover p {
+section:not(.sustainability-section) div:hover p {
   color: #0071C5;
   /* Highlight description text on hover */
   font-weight: 500;
@@ -339,6 +339,296 @@ section div:hover p {
   padding: 20px;
   margin: 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================
+   SUSTAINABILITY SECTION (Bootstrap Grid)
+   ============================================ */
+
+/* Main sustainability section container */
+.sustainability-section {
+  background-color: #f0f7fc;
+  /* Light blue background for visual separation */
+  padding: 40px 20px;
+  /* Vertical and horizontal padding */
+  display: block;
+  /* Override section flex display to allow proper grid layout */
+  overflow: hidden;
+  /* Prevent overflow */
+  max-width: 100%;
+  /* Fit container */
+  box-sizing: border-box;
+  /* Include padding in width calculation */
+}
+
+/* Reset timeline card styles for sustainability section columns */
+.sustainability-section div {
+  background-color: transparent;
+  /* Remove white background */
+  border-left: none;
+  /* Remove left border */
+  border-right: none;
+  /* Remove right border */
+  padding: 0;
+  /* Remove padding */
+  border-radius: 0;
+  /* Remove border radius */
+  box-shadow: none;
+  /* Remove shadow */
+  min-width: unset;
+  /* Reset min-width */
+  max-width: unset;
+  /* Reset max-width */
+  flex-shrink: unset;
+  /* Reset flex-shrink */
+  scroll-snap-align: unset;
+  /* Reset scroll snap align */
+  scroll-snap-stop: unset;
+  /* Reset scroll snap stop */
+  perspective: unset;
+  /* Reset perspective */
+}
+
+/* Reset timeline image styles for sustainability section */
+.sustainability-section img {
+  width: unset;
+  /* Reset width */
+  height: unset;
+  /* Reset height */
+  object-fit: unset;
+  /* Reset object-fit */
+  border-radius: 0;
+  /* Reset border radius */
+  margin-bottom: 0;
+  /* Reset margin */
+  box-shadow: none;
+  /* Reset shadow */
+}
+
+/* Reset timeline h2 styles for sustainability section */
+.sustainability-section h2 {
+  font-size: unset;
+  color: unset;
+  margin-bottom: 0;
+  font-weight: unset;
+  transition: none;
+  text-shadow: none;
+  transform: none;
+  display: none;
+  /* Hide h2 if present */
+}
+
+/* Reset timeline h3 styles for sustainability section */
+.sustainability-section h3 {
+  font-size: 22px;
+  /* Custom size for sustainability section */
+  color: #0071C5;
+  /* Intel Blue */
+  margin-bottom: 15px;
+  margin-top: 0;
+  font-weight: 600;
+  transition: none;
+  transform: none;
+  letter-spacing: normal;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Reset timeline p styles for sustainability section */
+.sustainability-section p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-shadow: none;
+  transition: none;
+}
+
+/* Style icons in sustainability section h3 */
+.sustainability-section h3 i {
+  font-size: 28px;
+  color: #FF6B35;
+  /* Orange color for icons */
+}
+
+/* Section title */
+.sustainability-title {
+  font-size: 36px;
+  /* Large heading for prominence */
+  color: #0071C5;
+  /* Intel Blue for brand consistency */
+  text-align: center;
+  margin-bottom: 50px;
+  /* Space below heading before grid */
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Individual sustainability card styling */
+.sustainability-card {
+  background-color: white;
+  /* White card background */
+  padding: 30px;
+  /* Internal padding for content */
+  border-radius: 0;
+  /* No rounded corners - flat design */
+  border-top: 3px solid #FF6B35;
+  /* Orange top border accent */
+  box-shadow: none;
+  /* No shadow - flat design */
+  height: 100%;
+  /* Make all cards equal height */
+  display: flex;
+  /* Use flexbox for layout */
+  flex-direction: column;
+  /* Stack items vertically */
+  transition: none;
+  /* Disable all transitions */
+}
+
+/* Card heading with icon */
+.sustainability-card h3 {
+  font-size: 22px;
+  color: #0071C5;
+  /* Intel Blue */
+  margin-bottom: 15px;
+  margin-top: 0;
+  font-weight: 600;
+  display: flex;
+  /* Use flexbox for icon alignment */
+  align-items: center;
+  /* Center icon vertically with text */
+  gap: 10px;
+  /* Space between icon and text */
+}
+
+/* Bootstrap icon styling within headings */
+.sustainability-card h3 i {
+  font-size: 28px;
+  /* Make icon larger than text */
+  color: #FF6B35;
+  /* Orange color for icons */
+}
+
+/* Card paragraph/description */
+.sustainability-card p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  /* Space before button */
+  flex-grow: 1;
+  /* Allow paragraph to expand and push button down */
+}
+
+/* Learn More button styling */
+.sustainability-card .btn {
+  margin-top: auto;
+  /* Push button to bottom of card */
+  align-self: flex-start;
+  /* Button starts on left */
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+/* Sustainability card hover effect */
+.sustainability-card:hover {
+  /* No hover effects */
+}
+
+/* Hover effect for button */
+.sustainability-card:hover .btn {
+  /* Button hover effect removed */
+}
+
+/* Responsive adjustments for tablets */
+@media (max-width: 768px) {
+  .sustainability-section {
+    padding: 40px 15px;
+  }
+
+  .sustainability-title {
+    font-size: 28px;
+    margin-bottom: 35px;
+  }
+
+  .sustainability-card {
+    padding: 25px;
+  }
+
+  .sustainability-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .sustainability-card h3 i {
+    font-size: 24px;
+  }
+
+  .sustainability-card p {
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+}
+
+/* Responsive adjustments for small phones */
+@media (max-width: 480px) {
+  .sustainability-section {
+    padding: 30px 12px;
+  }
+
+  .sustainability-title {
+    font-size: 22px;
+    margin-bottom: 25px;
+  }
+
+  .sustainability-card {
+    padding: 18px;
+  }
+
+  .sustainability-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    gap: 8px;
+  }
+
+  .sustainability-card h3 i {
+    font-size: 20px;
+  }
+
+  .sustainability-card p {
+    font-size: 12px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+
+  .sustainability-card .btn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /* ============================================
    RTL (RIGHT-TO-LEFT) SUPPORT
