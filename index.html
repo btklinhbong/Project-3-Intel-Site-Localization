@@ -14,7 +14,7 @@
   <header>
     <div>
       <!-- Ask Copilot to teach you about `.svg`. 🙂 You'll need to resize the logo with CSS. -->
-      <img src="img/intel-header-logo.svg" alt="Intel Logo" />
+      <img src="img/intel-header-logo.svg" alt="Intel logo in white" />
       <!-- Main Heading -->
       <h1>
         Sustainability Through the Ages
@@ -29,14 +29,16 @@
     </div>
   </header>
 
-  <!-- Timeline Cards Section -->
-  <section>
+  <!-- Main Content Area -->
+  <main>
+    <!-- Timeline Cards Section -->
+    <section class="timeline-section">
 
     <!-- Card 1: 1968 -->
     <div>
       <h2>1968</h2>
       <h3>Intel Founded</h3>
-      <img src="img/1968.png" alt="1968 - Intel Founded" />
+      <img src="img/1968.png" alt="1968 Intel founded milestone image" />
       <p>
         Robert Noyce and Gordon Moore rename the newly formed company 
         NM Electronics to Intel Corporation, laying the foundation for 
@@ -48,7 +50,7 @@
     <div>
       <h2>1971</h2>
       <h3>First Microprocessor</h3>
-      <img src="img/1971.png" alt="1971 - First Microprocessor" />
+      <img src="img/1971.png" alt="1971 first microprocessor milestone image" />
       <p>
         Intel debuts the 4004, the world's first commercial microprocessor, 
         igniting the microprocessor revolution and propelling the future 
@@ -60,7 +62,7 @@
     <div>
       <h2>1978</h2>
       <h3>8086 Processor</h3>
-      <img src="img/1978.png" alt="1978 - 8086 Processor" />
+      <img src="img/1978.png" alt="1978 8086 processor milestone image" />
       <p>
         Launch of the 8086 processor, establishing the x86 architecture 
         that drives countless PCs and servers in the modern era.
@@ -71,7 +73,7 @@
     <div>
       <h2>1985</h2>
       <h3>386 Processor</h3>
-      <img src="img/1985.png" alt="1985 - 386 Processor" />
+      <img src="img/1985.png" alt="1985 386 processor milestone image" />
       <p>
         Intel introduces the 386 processor with 32-bit architecture, 
         ushering in a new era of performance and multitasking for 
@@ -83,7 +85,7 @@
     <div>
       <h2>2006</h2>
       <h3>Peak GHG Emissions</h3>
-      <img src="img/2006.png" alt="2006 - Peak GHG Emissions" />
+      <img src="img/2006.png" alt="2006 peak GHG emissions milestone image" />
       <p>
         This year marks Intel's highest annual greenhouse gas emissions 
         for operations. Over subsequent years, Intel invests heavily in 
@@ -96,7 +98,7 @@
     <div>
       <h2>2020</h2>
       <h3>RISE Strategy</h3>
-      <img src="img/2020.png" alt="2020 - RISE Strategy" />
+      <img src="img/2020.png" alt="2020 RISE strategy milestone image" />
       <p>
         Intel launches its RISE (Responsible, Inclusive, Sustainable, 
         Enabling) strategy and 2030 goals, aiming to drive industry-wide 
@@ -108,7 +110,7 @@
     <div>
       <h2>2022</h2>
       <h3>Net-Zero By 2040</h3>
-      <img src="img/2022.png" alt="2022 - Net-Zero By 2040" />
+      <img src="img/2022.png" alt="2022 net-zero by 2040 milestone image" />
       <p>
         Intel announces its commitment to achieve net-zero greenhouse 
         gas emissions (Scope 1 and 2) across its global operations 
@@ -120,7 +122,7 @@
     <div>
       <h2>2023</h2>
       <h3>Renewable Electricity</h3>
-      <img src="img/2.jpg" alt="2023 - Renewable Electricity" />
+      <img src="img/2.jpg" alt="2023 renewable electricity milestone image" />
       <p>
         The company achieves 99% renewable electricity usage worldwide, 
         helping to drastically lower carbon emissions and driving progress 
@@ -132,7 +134,7 @@
     <div>
       <h2>2024</h2>
       <h3>Sustainability Summit</h3>
-      <img src="img/2024.png" alt="2024 - Sustainability Summit" />
+      <img src="img/2024.png" alt="2024 sustainability summit milestone image" />
       <p>
         Intel hosts its first Sustainability Summit, uniting suppliers, 
         government officials, and industry leaders to collaborate on 
@@ -154,7 +156,7 @@
           <!-- Card content -->
           <p>Reducing greenhouse gas emissions, transitioning to renewable energy, and minimizing environmental impact across all operations.</p>
           <!-- Learn More Button -->
-          <button class="btn btn-primary mt-auto">Learn More</button>
+          <button class="btn btn-primary mt-auto" type="button" data-bs-toggle="modal" data-bs-target="#sustainabilityModal">Learn More</button>
         </article>
 
         <!-- COLUMN 2: Social -->
@@ -166,7 +168,7 @@
           <!-- Card content -->
           <p>Supporting communities, ensuring fair labor practices, and creating safe working conditions for all employees worldwide.</p>
           <!-- Learn More Button -->
-          <button class="btn btn-primary mt-auto">Learn More</button>
+          <button class="btn btn-primary mt-auto" type="button" data-bs-toggle="modal" data-bs-target="#sustainabilityModal">Learn More</button>
         </article>
 
         <!-- COLUMN 3: Governance -->
@@ -178,11 +180,54 @@
           <!-- Card content -->
           <p>Maintaining ethical business practices, transparency, and accountability in all decision-making processes and operations.</p>
           <!-- Learn More Button -->
-          <button class="btn btn-primary mt-auto">Learn More</button>
+          <button class="btn btn-primary mt-auto" type="button" data-bs-toggle="modal" data-bs-target="#sustainabilityModal">Learn More</button>
         </article>
       </div>
     </div>
   </section>
+
+  <!-- Subscription Section: Stay Updated -->
+  <section class="subscription-section" aria-labelledby="stay-updated-heading">
+    <div class="subscription-inner">
+      <h2 id="stay-updated-heading">Stay Updated</h2>
+      <p>Subscribe for sustainability highlights, product news, and community updates.</p>
+      <form class="subscription-form" action="#" method="post">
+        <!-- Visible label for accessibility -->
+        <label for="email">Email Address</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="site-footer">
+    <p>© 2026 Intel Corporation</p>
+    <nav aria-label="Footer links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+    </nav>
+  </footer>
+
+  <!-- Bootstrap Modal: Sustainability Details (outside main) -->
+  <div class="modal fade" id="sustainabilityModal" tabindex="-1" aria-labelledby="sustainabilityModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="sustainabilityModalLabel">Sustainability Pillars</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Placeholder details: Learn how Intel is advancing environmental stewardship, social responsibility, and ethical governance across the organization.</p>
+          <p>Placeholder details: Each pillar includes goals, measurable progress, and ongoing commitments to communities and the planet.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Instruction text for users -->
   <p class="instruction-text">Scroll to view timeline | Hover over cards to learn more!</p>
@@ -193,6 +238,18 @@
   <script>
     // List of RTL languages
     const rtlLanguages = ['ar', 'he', 'fa', 'ur', 'yi', 'ji', 'iw', 'ku', 'ps', 'sd'];
+
+    // Bonus: If browser language is Arabic, force lang and dir for RTL
+    function applyArabicFromBrowser() {
+      const browserLang = (navigator.language || '').toLowerCase();
+
+      if (browserLang.startsWith('ar')) {
+        const htmlElement = document.documentElement;
+        htmlElement.setAttribute('lang', 'ar');
+        htmlElement.setAttribute('dir', 'rtl');
+        document.body.setAttribute('dir', 'rtl');
+      }
+    }
 
     // Function to detect if content is translated and apply RTL if needed
     function detectAndApplyRTL() {
@@ -213,7 +270,10 @@
     }
 
     // Run on page load
-    document.addEventListener('DOMContentLoaded', detectAndApplyRTL);
+    document.addEventListener('DOMContentLoaded', function() {
+      applyArabicFromBrowser();
+      detectAndApplyRTL();
+    });
 
     // Monitor for changes (browser translation detection)
     const observer = new MutationObserver(function(mutations) {

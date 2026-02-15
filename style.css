@@ -195,7 +195,7 @@ section p {
    ============================================ */
 
 /* Hover effect - card elevation and color change */
-section:not(.sustainability-section) div:hover {
+.timeline-section div:hover {
   transform: translateY(-12px) rotateX(2deg) scale(1.02);
   /* Lift card with subtle 3D rotation and scale */
   box-shadow: 
@@ -210,7 +210,7 @@ section:not(.sustainability-section) div:hover {
 }
 
 /* Hover effect - Image zoom and brightness enhancement */
-section:not(.sustainability-section) div:hover img {
+.timeline-section div:hover img {
   transform: scale(1.08) rotateZ(-1deg);
   /* Zoom with subtle tilt */
   filter: brightness(1.15) contrast(1.05);
@@ -220,7 +220,7 @@ section:not(.sustainability-section) div:hover img {
 }
 
 /* Hover effect for year text */
-section:not(.sustainability-section) div:hover h2 {
+.timeline-section div:hover h2 {
   color: #FF6B35;
   /* Orange accent for contrast */
   text-shadow: 0 2px 8px rgba(255, 107, 53, 0.2);
@@ -230,7 +230,7 @@ section:not(.sustainability-section) div:hover h2 {
 }
 
 /* Hover effect for title */
-section:not(.sustainability-section) div:hover h3 {
+.timeline-section div:hover h3 {
   color: #0071C5;
   /* Intel Blue on hover */
   transform: translateX(4px) scale(1.05);
@@ -240,7 +240,7 @@ section:not(.sustainability-section) div:hover h3 {
 }
 
 /* Hover effect for description - text enhancement */
-section:not(.sustainability-section) div:hover p {
+.timeline-section div:hover p {
   color: #0071C5;
   /* Highlight description text on hover */
   font-weight: 500;
@@ -398,6 +398,122 @@ section:not(.sustainability-section) div:hover p {
   /* Reset perspective */
 }
 
+/* ============================================
+   SUBSCRIPTION SECTION
+   ============================================ */
+
+/* Dark, high-contrast area for the form */
+.subscription-section {
+  background-color: #0b1f3a;
+  color: #ffffff;
+  padding: 60px 20px;
+  display: block;
+  overflow: hidden;
+  overflow-x: hidden;
+  scroll-snap-type: none;
+  gap: 0;
+}
+
+/* Center the content and keep it readable */
+.subscription-inner {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Override generic section heading styles */
+.subscription-section h2 {
+  color: #0071C5;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+/* Override generic section paragraph styles */
+.subscription-section p {
+  color: #0071C5;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Simple vertical form layout for beginners */
+.subscription-form {
+  max-width: 420px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+}
+
+/* Keep label visible and readable */
+.subscription-form label {
+  font-weight: bold;
+  color: #0071C5;
+}
+
+/* High-contrast input styling */
+.subscription-form input {
+  padding: 12px;
+  border-radius: 6px;
+  border: 2px solid #ffffff;
+  background-color: #ffffff;
+  color: #111111;
+  font-size: 16px;
+}
+
+/* Darker placeholder for better contrast */
+.subscription-form input::placeholder {
+  color: #555555;
+}
+
+/* Clear focus styles for keyboard users */
+.subscription-form input:focus {
+  outline: 3px solid #ffb100;
+  outline-offset: 2px;
+}
+
+/* Bright button for strong contrast */
+.subscription-form button {
+  padding: 12px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #ffb100;
+  color: #111111;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Simple hover state */
+.subscription-form button:hover {
+  background-color: #ffca4d;
+}
+
+/* ============================================
+   FOOTER SECTION
+   ============================================ */
+
+/* Footer styling with clear contrast */
+.site-footer {
+  background-color: #061327;
+  color: #ffffff;
+  padding: 24px 20px;
+  text-align: center;
+}
+
+/* Footer links style */
+.site-footer a {
+  color: #ffffff;
+  text-decoration: underline;
+  margin: 0 10px;
+  font-weight: 600;
+}
+
+/* Keep footer text readable */
+.site-footer p {
+  margin-bottom: 10px;
+}
+
 /* Reset timeline image styles for sustainability section */
 .sustainability-section img {
   width: unset;
@@ -540,16 +656,6 @@ section:not(.sustainability-section) div:hover p {
   font-weight: 600;
   padding: 10px 20px;
   border-radius: 5px;
-}
-
-/* Sustainability card hover effect */
-.sustainability-card:hover {
-  /* No hover effects */
-}
-
-/* Hover effect for button */
-.sustainability-card:hover .btn {
-  /* Button hover effect removed */
 }
 
 /* Responsive adjustments for tablets */
